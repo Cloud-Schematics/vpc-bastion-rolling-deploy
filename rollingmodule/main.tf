@@ -139,7 +139,7 @@ resource "ibm_is_lb_pool" "vsi-rolling-lb-pool" {
   lb                 = ibm_is_lb.vsi-rolling-lb.id
   name               = "vsi-rolling-lb-pool"
   protocol           = "http"
-  algorithm          = "round_robin"
+  algorithm          = "weighted_round_robin"
   health_delay       = "5"
   health_retries     = "2"
   health_timeout     = "2"
